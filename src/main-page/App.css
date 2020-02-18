@@ -1,3 +1,8 @@
+html, body, #root, .App {
+  width: 100%;
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -49,6 +54,13 @@ body {
   line-height: 2em;
   text-transform: none;
   color: #121212;
+  min-height: 100%;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
 h2 {
@@ -79,4 +91,13 @@ h3 {
   letter-spacing: .12em;
   line-height: 1.6em;
   text-transform: uppercase;
+}
+
+
+.nav-link {
+  margin: auto;
+}
+
+.navbar {
+  margin-bottom: 5%;
 }

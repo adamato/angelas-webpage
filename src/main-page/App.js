@@ -5,30 +5,29 @@ import Contact from './components/Contact.js';
 import Portfolio from './components/Portfolio.js';
 import Resume from './components/Resume.js';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
-import {Navbar, Nav} from 'react-bootstrap';
+import {Navbar, Nav, Button} from 'react-bootstrap';
 
 function App() {
     return (
         <Router>
             <div>
-                <Navbar style={{BackgroundColor: '#02f030!important'}} bg="dark" variant="dark" collapseOnSelect expand="lg" sticky="top">
+                <Navbar bg="light" variant="light" collapseOnSelect expand="lg" sticky="top">
                     <Navbar.Brand as={Link} to={"/"}>
-                        angela.d
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mr-auto" style={{float: 'left'}}>
+                        <Nav className="ml-auto justify-content-end" style={{float: 'right'}}>
                             <Nav.Link as={Link} to="/about">
-                                About
+                                ABOUT
                             </Nav.Link>
                             <Nav.Link as={Link} to="/resume">
-                                Resume
+                                RESUME
                             </Nav.Link>
                             <Nav.Link as={Link} to="/portfolio">
-                                Portfolio
+                                WORK
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/contact">
-                                Contact
+                            <Nav.Link as={Link} to="/contact" variant="outline-primary">
+                                <Button variant="outline-primary">CONTACT</Button>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
