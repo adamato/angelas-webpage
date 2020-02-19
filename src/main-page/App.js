@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
-import Portfolio from './components/Portfolio.js';
+import Work from './components/Work.js';
 import Resume from './components/Resume.js';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import {Navbar, Nav, Button} from 'react-bootstrap';
@@ -19,9 +19,6 @@ function App() {
                         <Nav className="ml-auto justify-content-end" style={{float: 'right'}}>
                             <Nav.Link as={Link} to="/about">
                                 ABOUT
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/resume">
-                                RESUME
                             </Nav.Link>
                             <Nav.Link as={Link} to="/portfolio">
                                 WORK
@@ -42,7 +39,7 @@ function App() {
                         <Resume />
                     </Route>
                     <Route path="/portfolio">
-                        <Portfolio />
+                        <Work />
                     </Route>
                     <Route path="/contact">
                         <Contact />
