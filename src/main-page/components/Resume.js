@@ -11,7 +11,7 @@ class Resume extends React.Component {
             <div>
                 <PDFViewer
                     backend={PDFJSBackend}
-                    src='/resume.pdf'
+                    src='/Angela_Damato_Resume.pdf'
                 />
             </div>
         );

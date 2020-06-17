@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import Home from './components/Home.js';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
 import Work from './components/Work.js';
 import Resume from './components/Resume.js';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import {Navbar, Nav, Button} from 'react-bootstrap';
+import Footer from './navigation/Footer.js';
 
 function App() {
     return (
@@ -13,6 +15,7 @@ function App() {
             <div>
                 <Navbar bg="light" variant="light" collapseOnSelect expand="lg" sticky="top">
                     <Navbar.Brand as={Link} to={"/"}>
+                        <Link to="/">Angela Damato</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -32,8 +35,11 @@ function App() {
                 </Navbar>
 
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
                     <Route path="/about">
-                        <About />
+                            <About />
                     </Route>
                     <Route path="/resume">
                         <Resume />
@@ -45,7 +51,7 @@ function App() {
                         <Contact />
                     </Route>
                 </Switch>
-
+                <Footer />
             </div>
         </Router>
     );
