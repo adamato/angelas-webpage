@@ -6,13 +6,13 @@ import {Button, Col, Row} from 'react-bootstrap';
 class About extends React.Component {
     render() {
         return (
-            <div style={{paddingTop:'2vw'}}>
+            <div style={{paddingTop:'2vw'}} className="about">
                 <Row>
                     <Col xs={{ span: 3, offset: 3}}>
                         <img src='/IMG_0101.JPG' alt="Logo" style={{height: 'auto', width: '100%'}}/>
                     </Col>
                     <Col xs={{ span: 4}} className="align-middle">
-                        <div style={{textAlign:'center', height: 10,verticalAlign: 'middle'}}>
+                        <div style={{textAlign:'center', height: '100%', verticalAlign: 'middle'}}>
                             <h5>Hello, I'm Angela!</h5><br/>
                             <p>I am a multi-passionate millennial currently living in Wisconsin.
                                 In 2015, I graduated with a Bachelor of Science in Information from <a href={'https://www.si.umich.edu/'}>UMSI</a> (Go Blue!) + a minor in Applied Statistics.

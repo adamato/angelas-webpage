@@ -1,8 +1,14 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import '../App.css';
 import {Form, Button, Col, Row} from 'react-bootstrap';
 import axios from 'axios';
+
+
+const rowStyled = styled.div`
+   margin-right: 0px !important;
+   margin-left: 0px;
+`;
 
 class Contact extends React.Component{
     handleChange(event) {
@@ -54,7 +60,7 @@ class Contact extends React.Component{
     render() {
         return (
             <div style={{paddingTop:'2vw'}}>
-                <Row>
+                <rowStyled>
                     <Col xs={{span: 5, offset: 3}}>
                         <h2 id="heading">Lets Connect!</h2>
                         <p>Wanna get in touch or talk about a project? drop a line in the form below or email me at
@@ -94,7 +100,7 @@ class Contact extends React.Component{
                             </Button>
                         </Form>
                     </Col>
-                </Row>
+                </rowStyled>
             </div>
         );
     }

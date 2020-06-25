@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components'
 import './App.css';
 import Home from './components/Home.js';
 import About from './components/About.js';
@@ -9,10 +10,24 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import Footer from './navigation/Footer.js';
 
+const AppWrapper = styled.div`
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+`;
+const ContentWrapper = styled.div`
+ flex: 1;
+`;
+
 function App() {
     return (
         <Router>
-            <div>
+            <AppWrapper>
+                <ContentWrapper>
                 <Navbar bg="light" variant="light" collapseOnSelect expand="lg" sticky="top">
                     <Navbar.Brand as={Link} to={"/"}>
                         <Link to="/">Angela Damato</Link>
@@ -51,8 +66,9 @@ function App() {
                         <Contact />
                     </Route>
                 </Switch>
+                </ContentWrapper>
                 <Footer />
-            </div>
+            </AppWrapper>
         </Router>
     );
 }
