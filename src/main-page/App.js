@@ -30,7 +30,9 @@ function App() {
                 <ContentWrapper>
                 <Navbar bg="light" variant="light" collapseOnSelect expand="lg" sticky="top">
                     <Navbar.Brand as={Link} to={"/"}>
-                        <Link to="/">Angela Damato</Link>
+                        <Link to="/">
+                            <img src='/logo.png' alt="Logo" style={{height: '3em', width: 'auto'}}/>
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

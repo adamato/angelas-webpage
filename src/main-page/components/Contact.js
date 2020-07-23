@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../App.css';
-import {Form, Button, Col, Row} from 'react-bootstrap';
+import {Form, Button, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
